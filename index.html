@@ -1,0 +1,229 @@
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prosta Peak — Prostate Wellness Support</title>
+  <meta name="description" content="Learn about Prosta Peak's prostate wellness support. Clean, fast, and mobile‑first presell page with a clear call‑to‑action to the official website." />
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta property="og:title" content="Prosta Peak — Prostate Wellness Support" />
+  <meta property="og:description" content="Discover a balanced approach to male wellness and urinary comfort." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/prostapeak-hero-bg.jpg" />
+  <meta property="og:url" content="https://your-domain.com/" />
+  <meta name="theme-color" content="#0b1220" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --text: #eaf0ff;
+      --muted: #b9c3d9;
+      --accent: #7bd88f; /* subtle green for trust */
+      --btn-border: rgba(255,255,255,.7);
+      --card: #121a2c;
+      --card-border: rgba(255,255,255,.08);
+      --maxw: 1200px;
+    }* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; text-decoration: none; }
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #0b1220;
+  overflow: clip;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: url('assets/prostapeak-hero-bg.jpg'); /* ← REPLACE with your image path */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.55) saturate(1.05);
+  transform: scale(1.02);
+  will-change: transform;
+}
+.hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(1200px 500px at 50% 15%, rgba(123,216,143,.20), transparent 60%),
+              linear-gradient(to top, rgba(11,18,32,.9) 0%, rgba(11,18,32,.15) 60%);
+}
+.hero-inner { position: relative; z-index: 2; max-width: 900px; padding: 64px 0; }
+.eyebrow { display: inline-flex; gap: 8px; align-items: center; padding: 6px 10px; border-radius: 999px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; background: rgba(255,255,255,.1); color: var(--muted); border: 1px solid var(--card-border); }
+.title { font-weight: 800; line-height: 1.1; margin: 16px auto; letter-spacing: -0.02em; }
+.title span { color: var(--accent); }
+.title.xl { font-size: clamp(32px, 6vw, 60px); }
+.subtitle { font-size: clamp(16px, 2.6vw, 20px); color: var(--muted); max-width: 800px; margin: 0 auto 32px; }
+
+.cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 16px 28px; font-weight: 700; font-size: 18px;
+  border-radius: 14px; border: 2px solid var(--btn-border);
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(6px);
+  transition: transform .12s ease, border-color .2s ease, background .2s ease;
+}
+.cta:hover { transform: translateY(-1px); border-color: #fff; background: rgba(255,255,255,.10); }
+.cta:active { transform: translateY(0); }
+
+.badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.badge { font-size: 12px; padding: 6px 10px; border: 1px solid var(--card-border); border-radius: 999px; color: var(--muted); background: rgba(255,255,255,.06); }
+
+/* CONTENT */
+.section { padding: 72px 0; }
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+.card { grid-column: span 12; background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 22px; }
+@media (min-width: 768px) {
+  .card { grid-column: span 4; }
+}
+.card h3 { margin: 8px 0 6px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* SECONDARY CTA */
+.cta-row { display: grid; place-items: center; text-align: center; gap: 10px; padding: 36px; background: linear-gradient(180deg, rgba(123,216,143,.1), rgba(255,255,255,0)); border: 1px solid var(--card-border); border-radius: 16px; }
+
+/* FOOTER */
+footer { padding: 40px 0; color: var(--muted); border-top: 1px solid var(--card-border); }
+.foot { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+.legal a { color: var(--muted); border-bottom: 1px dashed var(--card-border); }
+.legal a:hover { color: #fff; }
+
+/* UTIL */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+  </style>
+</head>
+<body>
+  <header class="container" style="padding: 18px 20px; display:flex; align-items:center; justify-content:space-between;">
+    <a href="#top" aria-label="Prosta Peak Presell Home" style="display:flex; gap:10px; align-items:center;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="white" opacity="0.7"/><path d="M7 13c2.5-1.5 4.5-1.5 7 0 2.5 1.5 4.5 1.5 7 0" stroke="#7bd88f"/></svg>
+      <strong>Wellness Brief</strong>
+    </a>
+    <nav>
+      <a class="cta" href="#learn" aria-label="Learn more">Learn more</a>
+    </nav>
+  </header>  <main id="top">
+    <!-- HERO -->
+    <section class="hero" role="banner">
+      <div class="hero-inner container">
+        <span class="eyebrow" aria-label="Informational presell">Balanced wellness brief</span>
+        <h1 class="title xl">Prosta Peak <span>— Prostate Wellness Support</span></h1>
+        <p class="subtitle">Explore a thoughtful overview of ingredients commonly used for male wellness and urinary comfort. For complete product details, visit the official website.</p>
+        <p>
+          <a class="cta" id="visit-btn" target="_blank" rel="nofollow noopener sponsored" href="https://prostapeak.com/?hopId=05de575f-8240-4b85-a9e5-1fe56fcff48b">Visit Official Website</a>
+        </p>
+        <div class="badges" aria-hidden="true">
+          <span class="badge">Mobile‑first</span>
+          <span class="badge">Fast loading</span>
+          <span class="badge">Ad policy‑friendly</span>
+        </div>
+      </div>
+    </section><!-- INFO CARDS -->
+<section id="learn" class="section">
+  <div class="container">
+    <div class="grid">
+      <article class="card" aria-label="Ingredient overview">
+        <h3>Thoughtful Ingredient Overview</h3>
+        <p>Prosta Peak is positioned as a dietary supplement for adult men. Ingredients commonly found in prostate‑support formulas may include plant extracts and micronutrients used to support general wellness. Always read the label on the official site.</p>
+      </article>
+      <article class="card" aria-label="Lifestyle alignment">
+        <h3>Designed to Fit a Balanced Routine</h3>
+        <p>A proactive lifestyle — adequate hydration, balanced nutrition, physical activity, and regular checkups — is important for overall wellbeing. Supplements can be one part of a broader routine.</p>
+      </article>
+      <article class="card" aria-label="Responsible use">
+        <h3>Responsible, Informed Use</h3>
+        <p>This page is informational and not medical advice. Consult a qualified healthcare professional before using any new supplement, especially if you have a medical condition, take medications, or are over 65.</p>
+      </article>
+    </div>
+
+    <div class="cta-row" style="margin-top:24px;">
+      <h2 style="margin:0 0 6px;">Ready to learn more?</h2>
+      <p style="margin:0 0 10px; color: var(--muted);">Access the official Prosta Peak website for full details, ingredients, and customer information.</p>
+      <p>
+        <a class="cta" target="_blank" rel="nofollow noopener sponsored" href="https://prostapeak.com/?hopId=05de575f-8240-4b85-a9e5-1fe56fcff48b" aria-label="Go to official Prosta Peak website">Go to Official Website</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container foot">
+      <small>© <span id="year"></span> Wellness Brief. All rights reserved.</small>
+      <nav class="legal" aria-label="Legal links">
+        <a href="#privacy" id="privacy-link">Privacy Policy</a> ·
+        <a href="#terms" id="terms-link">Terms of Use</a>
+      </nav>
+    </div><!-- Lightweight inline legal sections (open as simple overlays) -->
+<section id="privacy" class="sr-only">We respect your privacy. This presell page does not collect personal data beyond standard, anonymized server logs. Links to external sites are provided for reference; please review their policies. For inquiries, contact the site owner.</section>
+<section id="terms" class="sr-only">This page is informational and does not diagnose, treat, cure, or prevent any disease. Always consult a healthcare professional before starting any supplement. External links are sponsored/affiliate where noted.</section>
+
+  </footer>  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple accessible modals for Privacy/Terms without heavy JS
+    function openOverlay(text) {
+      const overlay = document.createElement('div');
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.style.position = 'fixed';
+      overlay.style.inset = '0';
+      overlay.style.background = 'rgba(0,0,0,.6)';
+      overlay.style.display = 'grid';
+      overlay.style.placeItems = 'center';
+      overlay.style.padding = '20px';
+
+      const box = document.createElement('div');
+      box.style.maxWidth = '720px';
+      box.style.background = getComputedStyle(document.documentElement).getPropertyValue('--card');
+      box.style.border = '1px solid var(--card-border)';
+      box.style.borderRadius = '14px';
+      box.style.padding = '22px';
+      box.style.color = 'var(--text)';
+      box.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">' +
+                      '<strong>Information</strong>' +
+                      '<button aria-label="Close" style="background:transparent;border:1px solid var(--card-border);color:inherit;padding:6px 10px;border-radius:8px;cursor:pointer">Close</button>' +
+                      '</div>' +
+                      '<div style="margin-top:10px;color:var(--muted);font-size:14px;">' + text + '</div>';
+
+      overlay.appendChild(box);
+      document.body.appendChild(overlay);
+
+      function close() { document.body.removeChild(overlay); }
+      overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+      box.querySelector('button').addEventListener('click', close);
+    }
+
+    document.getElementById('privacy-link').addEventListener('click', function(e){
+      e.preventDefault();
+      openOverlay(document.getElementById('privacy').textContent);
+    });
+    document.getElementById('terms-link').addEventListener('click', function(e){
+      e.preventDefault();
+      openOverlay(document.getElementById('terms').textContent);
+    });
+
+    // Optional: measure outbound clicks (privacy‑friendly, no external scripts)
+    document.getElementById('visit-btn').addEventListener('click', function(){
+      try { window.sessionStorage.setItem('visited_official', '1'); } catch(err){}
+    });
+  </script></body>
+</html>
