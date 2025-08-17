@@ -1,145 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ProstaPeak - Official Presell</title>
+  <meta name="description" content="Informational presell — learn more about ProstaPeak and visit the official site."/>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      text-align: center;
+    :root{
+      --bg:#f7f8fb;
+      --text:#111;
+      --muted:#606774;
+      --yellow:#ffd400;
+      --yellow-dark:#e6c200;
+      --card:#fff;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:28px 16px;
+      background-image: url('https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1600&q=80');
+      background-size:cover;
+      background-position:center;
+      position:relative;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.78));
+    }
+    .hero-inner{position:relative;z-index:2;text-align:center;max-width:880px}
+    .headline{font-size:clamp(22px,4.8vw,42px);font-weight:800;margin:0 0 12px}
+    .sub{font-size:clamp(14px,2.2vw,18px);color:var(--muted);margin:0 0 22px}
+    /* video */
+    .video-wrap{width:100%;max-width:760px;margin:0 auto 18px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(20,20,30,.08)}
+    .video-wrap iframe{width:100%;height:100%;border:0;display:block}
+    /* CTA */
+    .cta{display:inline-block;background:linear-gradient(var(--yellow),var(--yellow-dark));color:#000;font-weight:800;padding:16px 42px;border-radius:10px;text-decoration:none;font-size:1.15rem;box-shadow:0 8px 22px rgba(0,0,0,.16);border:2px solid rgba(0,0,0,.06)}
+    .cta:active{transform:translateY(1px)}
+    /* BADGES / STAMPS */
+    .badges{margin-top:22px;display:grid;grid-template-columns:repeat(6,minmax(80px,1fr));gap:14px;align-items:center;max-width:960px}
+    .stamp{display:flex;justify-content:center;align-items:center}
+    /* small screens */
+    @media (max-width:900px){
+      .badges{grid-template-columns:repeat(3,1fr)}
+      .headline{font-size:28px}
+    }
+    @media (max-width:480px){
+      .cta{width:86%;padding:14px 20px;font-size:1.05rem}
+      .video-wrap{height:auto;aspect-ratio:16/9}
     }
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #222;
-      background: rgba(255,255,255,0.8);
-      padding: 10px 20px;
-      border-radius: 8px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #444;
-      background: rgba(255,255,255,0.7);
-      padding: 5px 15px;
-      border-radius: 6px;
-    }
-
-    .video {
-      margin: 20px 0;
-      max-width: 560px;
-      width: 100%;
-    }
-
-    .video iframe {
-      width: 100%;
-      height: 315px;
-      border: none;
-      border-radius: 10px;
-    }
-
-    .cta-button {
-      background: #FFD700;
-      color: #000;
-      text-decoration: none;
-      font-size: 1.5rem;
-      font-weight: bold;
-      padding: 15px 40px;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 20px;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background: #e6c200;
-    }
-
-    .badges {
-      margin: 40px auto 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 20px;
-      max-width: 800px;
-      width: 100%;
-    }
-
-    .badge {
-      border: 2px solid #222;
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 0.8rem;
-      font-weight: bold;
-      text-align: center;
-      padding: 10px;
-      background: #fff;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: #222;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #FFD700;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
+    /* footer */
+    footer{padding:20px 0;background:transparent;text-align:center;color:var(--muted);font-size:0.9rem}
+    footer a{color:var(--muted);text-decoration:underline}
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Support Your Prostate Health Naturally</h1>
-    <p>Discover the official ProstaPeak formula for men’s wellness.</p>
+  <main class="hero" role="main" aria-label="ProstaPeak presell hero">
+    <div class="hero-inner container">
+      <h1 class="headline">Support Prostate Wellness — Learn More</h1>
+      <p class="sub">Informational overview. For full details and ordering, visit the official website.</p>
 
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video Placeholder"></iframe>
+      <!-- Video (placeholder) -->
+      <div class="video-wrap" aria-hidden="false">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Product video" allowfullscreen loading="lazy"></iframe>
+      </div>
+
+      <!-- CTA -->
+      <p style="margin-top:6px">
+        <a class="cta" target="_blank" rel="nofollow noopener sponsored" href="https://prostapeak.com/?hopId=05de575f-8240-4b85-a9e5-1fe56fcff48b" aria-label="Order Now">Order Now</a>
+      </p>
+
+      <!-- Stamp badges (SVG carimbo style) -->
+      <div class="badges" role="list" aria-label="Quality stamps">
+        <!-- 1: Fast & Free Shipping -->
+        <div class="stamp" role="listitem" title="Fast & Free Shipping">
+          <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="false" role="img">
+            <defs>
+              <style>.t{font-family:Inter,Arial,sans-serif;font-weight:700;fill:#111}</style>
+            </defs>
+            <circle cx="100" cy="100" r="96" stroke="#111" stroke-width="3" fill="white"/>
+            <circle cx="100" cy="100" r="76" stroke="#111" stroke-width="1.8" fill="none"/>
+            <text class="t" x="100" y="30" text-anchor="middle" font-size="14">FAST &amp; FREE</text>
+            <text class="t" x="100" y="185" text-anchor="middle" font-size="14">SHIPPING</text>
+            <!-- truck icon -->
+            <g transform="translate(36,56)" stroke="#111" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="22" width="82" height="26" rx="4" fill="#111"/>
+              <rect x="58" y="10" width="22" height="22" rx="2" fill="#fff"/>
+              <circle cx="22" cy="60" r="10" fill="#111"/>
+              <circle cx="70" cy="60" r="10" fill="#111"/>
+              <path d="M86 38h24v20" stroke="#111" fill="none"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 2: GMP Certified -->
+        <div class="stamp" role="listitem" title="GMP Certified">
+          <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
+            <style>.t2{font-family:Inter,Arial,sans-serif;font-weight:700;fill:#111}</style>
+            <circle cx="100" cy="100" r="96" stroke="#111" stroke-width="3" fill="white"/>
+            <circle cx="100" cy="100" r="76" stroke="#111" stroke-width="1.8" fill="none"/>
+            <text class="t2" x="100" y="30" text-anchor="middle" font-size="16">GMP</text>
+            <text class="t2" x="100" y="185" text-anchor="middle" font-size="12">CERTIFIED</text>
+            <!-- lab flask icon -->
+            <g transform="translate(54,50)" stroke="#111" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10h60l-22 40v18a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8v-18z" fill="#111"/>
+              <rect x="26" y="16" width="28" height="6" fill="#fff"/>
+              <circle cx="46" cy="12" r="4" fill="#fff"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 3: FDA Registered Facility -->
+        <div class="stamp" role="listitem" title="FDA Registered Facility">
+          <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
+            <style>.t3{font-family:Inter,Arial,sans-serif;font-weight:700;fill:#111}</style>
+            <circle cx="100" cy="100" r="96" stroke="#111" stroke-width="3" fill="white"/>
+            <circle cx="100" cy="100" r="76" stroke="#111" stroke-width="1.8" fill="none"/>
+            <text class="t3" x="100" y="30" text-anchor="middle" font-size="16">FDA</text>
+            <text class="t3" x="100" y="185" text-anchor="middle" font-size="12">REGISTERED</text>
+            <!-- facility icon -->
+            <g transform="translate(48,56)" stroke="#111" stroke-width="3" fill="none">
+              <rect x="6" y="10" width="60" height="48" rx="4" fill="#111"/>
+              <rect x="14" y="20" width="14" height="12" fill="#fff"/>
+              <rect x="34" y="20" width="14" height="12" fill="#fff"/>
+              <path d="M6 10l28-10 32 10" fill="none" stroke="#111"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 4: 100% Natural Ingredients -->
+        <div class="stamp" role="listitem" title="100% Natural Ingredients">
+          <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
+            <style>.t4{font-family:Inter,Arial,sans-serif;font-weight:700;fill:#111}</style>
+            <circle cx="100" cy="100" r="96" stroke="#111" stroke-width="3" fill="white"/>
+            <circle cx="100" cy="100" r="76" stroke="#111" stroke-width="1.8" fill="none"/>
+            <text class="t4" x="100" y="30" text-anchor="middle" font-size="12">100% NATURAL</text>
+            <text class="t4" x="100" y="185" text-anchor="middle" font-size="12">INGREDIENTS</text>
+            <!-- leaf icon -->
+            <g transform="translate(60,50)" stroke="#111" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 58c18-28 46-40 66-38-8-18-26-30-50-20-8 4-20 12-24 30z" fill="#111"/>
+              <path d="M24 52c14-18 32-22 46-20" stroke="#fff" stroke-width="2"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 5: Made in USA -->
+        <div class="stamp" role="listitem" title="Made in USA">
+          <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
+            <style>.t5{font-family:Inter,Arial,sans-serif;font-weight:700;fill:#111}</style>
+            <circle cx="100" cy="100" r="96" stroke="#111" stroke-width="3" fill="white"/>
+            <circle cx="100" cy="100" r="76" stroke="#111" stroke-width="1.8" fill="none"/>
+            <text class="t5" x="100" y="30" text-anchor="middle" font-size="12">MADE IN</text>
+            <text class="t5" x="100" y="185" text-anchor="middle" font-size="16">USA</text>
+            <!-- simple flag stripes -->
+            <g transform="translate(46,56)" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round">
+              <rect x="4" y="8" width="56" height="36" fill="#111"/>
+              <path d="M4 8h56" stroke="#fff"/>
+              <path d="M4 18h56" stroke="#fff"/>
+              <path d="M4 28h56" stroke="#fff"/>
+              <rect x="6" y="10" width="18" height="12" fill="#fff"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 6: GMO Free -->
+        <div class="stamp" role="listitem" title="GMO Free">
+          <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
+            <style>.t6{font-family:Inter,Arial,sans-serif;font-weight:700;fill:#111}</style>
+            <circle cx="100" cy="100" r="96" stroke="#111" stroke-width="3" fill="white"/>
+            <circle cx="100" cy="100" r="76" stroke="#111" stroke-width="1.8" fill="none"/>
+            <text class="t6" x="100" y="30" text-anchor="middle" font-size="18">GMO</text>
+            <text class="t6" x="100" y="185" text-anchor="middle" font-size="14">FREE</text>
+            <!-- DNA-ish icon with slash -->
+            <g transform="translate(54,48)" stroke="#111" stroke-width="3" fill="none" stroke-linecap="round">
+              <path d="M6 6c6 6 20 6 28 0 8-6 20-6 28 0" />
+              <path d="M6 38c6-6 20-6 28 0 8 6 20 6 28 0" />
+              <line x1="6" y1="10" x2="72" y2="42"/>
+            </g>
+          </svg>
+        </div>
+      </div>
     </div>
+  </main>
 
-    <a href="https://prostapeak.com/?hopId=05de575f-8240-4b85-a9e5-1fe56fcff48b" class="cta-button">Order Now!</a>
-
-    <div class="badges">
-      <div class="badge">🚚<br>Fast & Free<br>Shipping</div>
-      <div class="badge">🧪<br>GMP<br>Certified</div>
-      <div class="badge">🏥<br>FDA Registered<br>Facility</div>
-      <div class="badge">🌿<br>100% Natural<br>Ingredients</div>
-      <div class="badge">🇺🇸<br>Made in<br>USA</div>
-      <div class="badge">🍃<br>GMO<br>Free</div>
+  <footer aria-label="Footer">
+    <div class="container">
+      <small style="color:var(--muted)">© <span id="yr"></span> Wellness Brief. Not medical advice. Visit official website for details. &nbsp; <a href="#" rel="noopener">Privacy Policy</a> • <a href="#" rel="noopener">Terms of Use</a></small>
     </div>
-  </div>
-
-  <footer>
-    <a href="#">Privacy Policy</a> | 
-    <a href="#">Terms of Use</a>
   </footer>
+
+  <script>
+    // insert current year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
