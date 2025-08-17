@@ -1,89 +1,142 @@
-
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prosta Peak — Prostate Wellness Support</title>
-  <meta name="description" content="Learn about Prosta Peak's prostate wellness support. Clean, fast, and mobile‑first presell page with a clear call‑to‑action to the official website." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosta Peak - Official Presell</title>
   <style>
     body {
       margin: 0;
-      font-family: Inter, sans-serif;
-      background: #0b1220;
-      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #222;
       text-align: center;
-    }.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url('assets/prostapeak-hero-bg.jpg') center/cover no-repeat;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  padding: 20px;
-}
-.hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-}
-.hero p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 30px;
-}
+    }
 
-.cta {
-  display: inline-block;
-  padding: 20px 40px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  border: 2px solid rgba(255,255,255,0.8);
-  background: transparent;
-  border-radius: 8px;
-  color: #fff;
-  text-decoration: none;
-  transition: all .2s ease;
-}
-.cta:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: #fff;
-}
+    .hero {
+      padding: 30px 15px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-footer {
-  padding: 20px;
-  font-size: 0.85rem;
-  color: #aaa;
-  background: #0b1220;
-}
-footer a {
-  color: #aaa;
-  text-decoration: underline;
-}
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+      aspect-ratio: 16 / 9;
+      margin-bottom: 30px;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #FFD600;
+      color: #000;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 18px 40px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .cta-button:hover {
+      background: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    .reviews {
+      margin: 50px auto;
+      max-width: 800px;
+      padding: 0 15px;
+    }
+
+    .reviews h2 {
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+
+    .reviews p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #f4f4f4;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #000;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .cta-button {
+        width: 80%;
+        font-size: 1.2rem;
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 <body>
   <section class="hero">
-    <div class="hero-content">
-      <h1>Prosta Peak — Prostate Wellness Support</h1>
-      <p>Explore a thoughtful overview of ingredients commonly used for male wellness and urinary comfort. For complete product details, visit the official website.</p>
-      <a class="cta" target="_blank" rel="nofollow noopener sponsored" href="https://prostapeak.com/?hopId=05de575f-8240-4b85-a9e5-1fe56fcff48b">Visit Official Website</a>
+    <h1>Support Prostate Health Naturally</h1>
+    <p>Discover a natural way to improve prostate health and well-being.</p>
+
+    <!-- Vídeo genérico (trocar o link depois) -->
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Product Video" 
+              allowfullscreen>
+      </iframe>
     </div>
-  </section>  <footer>
-    <p>© <span id="year"></span> Wellness Brief. All rights reserved. · <a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms of Use</a></p>
-  </footer>  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script></body>
+
+    <!-- Botão de chamada -->
+    <a href="https://prostapeak.com/?hopId=05de575f-8240-4b85-a9e5-1fe56fcff48b" 
+       class="cta-button">Order Now!</a>
+  </section>
+
+  <!-- Testemunho simples -->
+  <section class="reviews">
+    <h2>What Our Customers Say</h2>
+    <p>“Prosta Peak helped me feel healthier and improved my quality of life.” – Verified Customer</p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+  </footer>
+</body>
 </html>
