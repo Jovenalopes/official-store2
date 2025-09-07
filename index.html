@@ -1,402 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <!-- Favicons padrão -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
-<link rel="shortcut icon" href="/favicon.ico?v=2"><!-- opcional mas recomendado -->
-
-<!-- iOS (ícone ao adicionar à tela inicial) -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ProstaPeak – Independent product info & prostate wellness overview</title>
-  <meta name="description" content="Independent, policy-friendly information page about prostate wellness support with a brief overview, video, and links to the official website." />
-  <meta name="robots" content="all" />
-  <link rel="canonical" href="https://official-store2.pages.dev/" />
-
-  <!-- Preconnects (YouTube) -->
-  <link rel="preconnect" href="https://www.youtube-nocookie.com">
-  <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
-
-  <style>
-    :root{
-      --bg:#ffffff; --text:#14161a; --muted:#626b7a; --card:#f7f9fc; --line:#e6e9f0;
-      --brand:#ffd400; --brandText:#111; --max:1024px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    .wrap{max-width:var(--max);margin:0 auto;padding:20px}
-    header{padding:18px 0;text-align:center}
-    h1{font-size:clamp(26px,3.6vw,38px);margin:10px 0 8px}
-    p.lead{color:var(--muted);font-size:clamp(16px,2.2vw,18px);margin:0 auto 12px;max-width:760px}
-
-    /* Video */
-    .video{display:flex;justify-content:center;margin:18px auto 8px}
-    .video iframe{width:min(100%,860px);aspect-ratio:16/9;border:0;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
-
-    /* CTA */
-    .cta-area{display:flex;justify-content:center;margin:18px 0 10px}
-    .cta{
-      display:inline-block;background:var(--brand);color:var(--brandText);font-weight:800;
-      padding:22px 46px;border-radius:12px;text-decoration:none;font-size:clamp(18px,2.6vw,22px);
-      box-shadow:0 8px 20px rgba(255,212,0,.35);transition:transform .12s ease;
-    }
-    .cta:hover{transform:translateY(-1px)}
-    .trust{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:18px 0 26px}
-    .seal{width:84px;height:84px}
-    @media (min-width:768px){ .seal{width:90px;height:90px} }
-
-    /* Sections */
-    section{padding:24px 0;border-top:1px solid var(--line)}
-    .cards{display:grid;grid-template-columns:1fr;gap:14px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-    .card h3{margin:4px 0 8px;font-size:18px}
-    .card p{margin:0;color:var(--muted)}
-    @media(min-width:860px){ .cards{grid-template-columns:repeat(3,1fr)} }
-
-    footer{border-top:1px solid var(--line);padding:22px 0;margin-top:18px;color:#434a57;font-size:14px;text-align:center}
-    footer a{color:#0a58ca;text-decoration:none}
-    footer a:hover{text-decoration:underline}
-    .small{font-size:13px;color:#6b7280;margin-top:10px}
-     <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Official Store</title>
-
-  <!-- FAVICONS -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-</head>
-  </style>
-
-  <!-- JSON-LD: ajuste "name", "email" se desejar -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Official Store 2",
-    "url":"https://official-store2.pages.dev/",
-    "email":"contact@official-store2.online",
-    "sameAs":[]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://official-store2.pages.dev/",
-    "name":"ProstaPeak – Independent Info",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://official-store2.pages.dev/?q={search_term_string}",
-      "query-input":"required name=search_term_string"
+  <title>Official Store 2 - Presell</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
-  }  
-  </script>
+    /* Animação pulsante suave */
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 6px 35px rgba(0, 123, 255, 0.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Container do Cookie Settings */
+.cookie-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  text-align: center;
+  z-index: 9999;
+
+  /* efeito pulsante no bloco todo */
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+    /* Imagem de fundo padrão (desktop) */
+    .hero {
+      height: 100vh; /* altura da tela inteira */
+      background: url("https://uploads.onecompiler.io/43v37pq3s/43vpwcvq6/presell.png") no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    /* Imagem de fundo para celular */
+    @media (max-width: 768px) {
+      .hero {
+        background: url("https://uploads.onecompiler.io/43v37pq3s/43vpwcvq6/presell-celular2.png") no-repeat center top;
+        background-size: cover;
+      }
+    }
+
+    /* Cookie Banner centralizado */
+    .cookie-banner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
+      text-align: center;
+      z-index: 9999;
+    }
+
+    .cookie-banner h2 {
+      margin-top: 0;
+    }
+
+    /* Links estilizados como botões */
+    .cookie-banner a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* Botão azul */
+    .cookie-banner .btn-accept {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    /* Botão cinza */
+    .cookie-banner .btn-decline {
+      background-color: #ccc;
+      color: black;
+    }
+
+    /* Container branco abaixo da imagem */
+    .content {
+      background: #fff;
+      padding: 20px;
+      max-width: 900px;
+      margin: -40px auto 0 auto; /* sobe um pouco para encostar na imagem */
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
+  <!-- Imagem de fundo -->
+  <div class="hero"></div>
 
-  <header class="wrap">
-    <h1>Prostate wellness support — independent overview</h1>
-    <p class="lead">Short, policy-friendly summary and a video review. For full product information, visit the official website below.</p>
-  </header>
-
-  <!-- Video (autoplay mudo; start=35s; nocookie) -->
-  <div class="video">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/3Nrj3V07pmk?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&start=35"
-      title="Informational video"
-      loading="lazy"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <h2>Cookie Settings</h2>
+    <p>
+      We use cookies and similar technologies to help personalize content, tailor and measure ads, 
+      and provide a better experience. By clicking accept, you agree to this as described in our Cookie Policy.
+    </p>
+    <a href="https://primehub.rf.gd/9s1htu" class="btn-accept">Yes, I accept</a>
+    <a href="https://primehub.rf.gd/9s1htu" class="btn-decline">No, I do not accept</a>
   </div>
 
-  <!-- CTA -->
-  <div class="cta-area">
-    <a class="cta"
-       href="https://prostapeak.com/?hopId=05de575f-8240-4b85-a9e5-1fe56fcff48b"
-       target="_blank"
-       rel="nofollow sponsored noopener"
-       aria-label="Visit the official ProstaPeak website">
-       Visit Official Website
-    </a>
-  </div>
-
-  <!-- Badges/Seals — neutros e policy-friendly -->
-  <div class="trust" aria-label="Trust badges">
-    <!-- USA -->
-    <svg class="seal" viewBox="0 0 100 100" aria-label="Made in USA">
-      <circle cx="50" cy="50" r="46" fill="none" stroke="#cfd6e3" stroke-width="3"/>
-      <text x="50" y="54" text-anchor="middle" font-family="Arial,Helvetica" font-size="9" fill="#5b6473" font-weight="700">MADE IN USA</text>
-    </svg>
-    <!-- FDA registered facility -->
-    <svg class="seal" viewBox="0 0 100 100" aria-label="Made in an FDA-registered facility">
-      <circle cx="50" cy="50" r="46" fill="none" stroke="#cfd6e3" stroke-width="3"/>
-      <text x="50" y="46" text-anchor="middle" font-size="8" fill="#5b6473" font-family="Arial" font-weight="700">FDA</text>
-      <text x="50" y="60" text-anchor="middle" font-size="6.5" fill="#5b6473" font-family="Arial">REGISTERED</text>
-      <text x="50" y="69" text-anchor="middle" font-size="6.5" fill="#5b6473" font-family="Arial">FACILITY</text>
-    </svg>
-    <!-- GMP -->
-    <svg class="seal" viewBox="0 0 100 100" aria-label="GMP certified">
-      <circle cx="50" cy="50" r="46" fill="none" stroke="#cfd6e3" stroke-width="3"/>
-      <text x="50" y="50" text-anchor="middle" font-size="10" fill="#5b6473" font-family="Arial" font-weight="700">GMP</text>
-      <text x="50" y="62" text-anchor="middle" font-size="7" fill="#5b6473" font-family="Arial">CERTIFIED</text>
-    </svg>
-    <!-- Non-GMO -->
-    <svg class="seal" viewBox="0 0 100 100" aria-label="Non-GMO">
-      <circle cx="50" cy="50" r="46" fill="none" stroke="#cfd6e3" stroke-width="3"/>
-      <text x="50" y="50" text-anchor="middle" font-size="9" fill="#5b6473" font-family="Arial" font-weight="700">NON-GMO</text>
-    </svg>
-    <!-- 100% Natural -->
-    <svg class="seal" viewBox="0 0 100 100" aria-label="100% natural">
-      <circle cx="50" cy="50" r="46" fill="none" stroke="#cfd6e3" stroke-width="3"/>
-      <text x="50" y="46" text-anchor="middle" font-size="9" fill="#5b6473" font-family="Arial" font-weight="700">100%</text>
-      <text x="50" y="60" text-anchor="middle" font-size="8" fill="#5b6473" font-family="Arial">NATURAL</text>
-    </svg>
-    <!-- Fast shipping -->
-    <svg class="seal" viewBox="0 0 100 100" aria-label="Fast shipping">
-      <circle cx="50" cy="50" r="46" fill="none" stroke="#cfd6e3" stroke-width="3"/>
-      <text x="50" y="54" text-anchor="middle" font-size="8.5" fill="#5b6473" font-family="Arial" font-weight="700">FAST SHIPPING</text>
-    </svg>
-  </div>
-  <section style="background:#fff; padding:40px 20px; font-family: Arial, sans-serif;">
-  <h2 style="text-align:center; font-size:26px; margin-bottom:30px;">User Reviews ⭐</h2>
-  
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
-
-    <!-- Review 1 -->
-    <div style="border:1px solid #ddd; border-radius:12px; padding:20px; text-align:center; background:#fafafa;">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 1" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px;">
-      <div style="color:#f4c150; font-size:20px;">★★★★★</div>
-      <h3 style="margin:10px 0; font-size:18px;">Great experience!</h3>
-      <p style="font-size:14px; color:#555;">“I've noticed more energy in my daily life. I feel more energized for simple tasks.”</p>
-      <p style="font-size:13px; font-weight:bold; margin-top:10px;">Miriam F.</p>
-    </div>
-
-    <!-- Review 2 -->
-    <div style="border:1px solid #ddd; border-radius:12px; padding:20px; text-align:center; background:#fafafa;">
-      <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Cliente 2" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px;">
-      <div style="color:#f4c150; font-size:20px;">★★★★★</div>
-      <h3 style="margin:10px 0; font-size:18px;">More confidence</h3>
-      <p style="font-size:14px; color:#555;">“Easy to take and without side effects. The natural formula gave me a lot of confidence.”</p>
-      <p style="font-size:13px; font-weight:bold; margin-top:10px;">Potter A.</p>
-    </div>
-
-    <!-- Review 3 -->
-    <div style="border:1px solid #ddd; border-radius:12px; padding:20px; text-align:center; background:#fafafa;">
-      <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Cliente 3" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px;">
-      <div style="color:#f4c150; font-size:20px;">★★★★★</div>
-      <h3 style="margin:10px 0; font-size:18px;">Improved well-being</h3>
-      <p style="font-size:14px; color:#555;">“I feel like my overall well-being has improved. Even my sleep seems more balanced.”</p>
-      <p style="font-size:13px; font-weight:bold; margin-top:10px;">Salomon M.</p>
-    </div>
-
-    <!-- Review 4 -->
-    <div style="border:1px solid #ddd; border-radius:12px; padding:20px; text-align:center; background:#fafafa;">
-      <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Cliente 4" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px;">
-      <div style="color:#f4c150; font-size:20px;">★★★★★</div>
-      <h3 style="margin:10px 0; font-size:18px;">Fast delivery</h3>
-      <p style="font-size:14px; color:#555;">“It arrived quickly and well packaged. After a few weeks I feel more active.”</p>
-      <p style="font-size:13px; font-weight:bold; margin-top:10px;">Grace L.</p>
-    </div>
-
-    <!-- Review 5 -->
-    <div style="border:1px solid #ddd; border-radius:12px; padding:20px; text-align:center; background:#fafafa;">
-      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente 5" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px;">
-      <div style="color:#f4c150; font-size:20px;">★★★★★</div>
-      <h3 style="margin:10px 0; font-size:18px;">Natural and effective</h3>
-      <p style="font-size:14px; color:#555;">“I liked it because it has no artificial ingredients. It gives you more vitality throughout the day.”</p>
-      <p style="font-size:13px; font-weight:bold; margin-top:10px;">Addison R.</p>
-    </div>
-
-    <!-- Review 6 -->
-    <div style="border:1px solid #ddd; border-radius:12px; padding:20px; text-align:center; background:#fafafa;">
-      <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Cliente 6" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px;">
-      <div style="color:#f4c150; font-size:20px;">★★★★★</div>
-      <h3 style="margin:10px 0; font-size:18px;">More energy</h3>
-      <p style="font-size:14px; color:#555;">“I have more energy to walk and maintain healthy habits. It's helping a lot.”</p>
-      <p style="font-size:13px; font-weight:bold; margin-top:10px;">Isabelle S.</p>
-    </div>
-
-    <!-- Review 7 -->
-    <div style="border:1px solid #ddd; border-radius:12px; padding:20px; text-align:center; background:#fafafa;">
-      <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Cliente 7" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px;">
-      <div style="color:#f4c150; font-size:20px;">★★★★★</div>
-      <h3 style="margin:10px 0; font-size:18px;">Focus and encouragement</h3>
-      <p style="font-size:14px; color:#555;">“I've noticed I'm more focused and motivated. I also enjoyed learning about the certification.”</p>
-      <p style="font-size:13px; font-weight:bold; margin-top:10px;">William T.</p>
-    </div>
-
-    <!-- Review 8 -->
-    <div style="border:1px solid #ddd; border-radius:12px; padding:20px; text-align:center; background:#fafafa;">
-      <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Cliente 8" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px;">
-      <div style="color:#f4c150; font-size:20px;">★★★★★</div>
-      <h3 style="margin:10px 0; font-size:18px;">Good buy</h3>
-      <p style="font-size:14px; color:#555;">“It was a good choice. I'm more confident and motivated to maintain a balanced lifestyle.”</p>
-      <p style="font-size:13px; font-weight:bold; margin-top:10px;">Olivia M.</p>
-    </div>
-    
-
-    <!-- (Aqui ficam os 8 reviews já criados antes) -->
-  </div>
-</div>
-  </div>
-<!-- BOTÃO (SEMPRE ABAIXO DOS REVIEWS, CENTRALIZADO) -->
-  <div style="text-align:center; margin-top:40px;">
-  <a href="https://prostapeak.com/?hopId=05de575f-8240-4b85-a9e5-1fe56fcff48b" 
-     style="background:#FFD700; color:#000; font-size:18px; font-weight:bold; 
-            text-decoration:none; padding:15px 35px; border-radius:8px; 
-            display:inline-block; transition:0.3s;">
-    👉 Order Now – Limited Offere
-   </a>
-    <p style="font-size:14px; color:#555; margin-top:10px;">
-      Secure checkout • Fast shipping • Satisfaction guaranteed
+  <!-- Texto em container separado -->
+  <section class="content">
+    <h2 style="text-align:center; font-size:16px; color:#333;">About SleepLean</h2>
+    <p>
+      SleepLean is a dietary supplement made with a combination of natural ingredients.  
+      The formula includes plant extracts, fibers, and nutrients traditionally associated with balance, rest, and overall well-being.  
+      Here are some of the main components:
     </p>
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Essential Natural Ingredients – Prosta Peak</title>
-  <style>
-    .ingredients-prosta {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem;
-      border-radius: 10px;
-      background-color: #000000; /* Fundo preto */
-      color: #ffffff; /* Texto branco */
-      box-shadow: 0 0 15px rgba(255,255,255,0.2); /* sombra leve no bloco */
-    }
+    <ul style="margin-left:20px;">
+      <li><strong>Valerian:</strong> traditionally used to promote relaxation and support restful nights.</li>
+      <li><strong>Hops:</strong> commonly found in teas, associated with rest and balance.</li>
+      <li><strong>Griffonia (5-HTP):</strong> African plant known for supporting emotional well-being and sleep quality.</li>
+      <li><strong>Berberine:</strong> a plant compound studied for its potential metabolic support.</li>
+      <li><strong>Blue Spirulina:</strong> a natural source of nutrients and antioxidants.</li>
+      <li><strong>Black Cohosh:</strong> traditionally used during women’s life transitions.</li>
+      <li><strong>Lutein:</strong> an antioxidant linked to vision and skin support.</li>
+      <li><strong>Inulin:</strong> a prebiotic fiber that supports digestive health.</li>
+    </ul>
 
-    .ingredients-prosta h2 {
-      color: #ffffff;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* sombra no título */
-    }
+    <h3 style="margin-top:10px; font-size:14px; color:#333;">Important Information</h3>
+    <p style="font-size:12px; line-height:1.4; color:#666;">
+      This product is a dietary supplement and does not replace a balanced diet or medical treatments.  
+      Results may vary from person to person. Use should be combined with a healthy lifestyle.  
+      Please consult a healthcare professional if you have questions before use.
+    </p>
 
-    .ingredients-prosta .columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .ingredients-prosta .column {
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .ingredients-prosta ul {
-      list-style: none; /* remove os bullets padrão */
-      padding-left: 0;
-    }
-
-    .ingredients-prosta li {
-      margin-bottom: 0.8rem;
-      position: relative;
-      padding-left: 25px;
-      line-height: 1.5;
-      font-weight: 500;
-    }
-
-    /* Ícone de folha antes de cada item */
-    .ingredients-prosta li::before {
-      content: "🌿";
-      position: absolute;
-      left: 0;
-    }
-
-    /* Efeito de sombra no texto do item */
-    .ingredients-prosta li {
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    }
-  </style>
-</head>
-<body>
-  <section class="ingredients-prosta">
-    <h2>Essential Natural Ingredients of Prosta Peak</h2>
-    <div class="columns">
-      <div class="column">
-        <ul>
-          <li>Saw Palmetto (American Dwarf Palm)</li>
-          <li>Nettle (Stinging Nettle Root)</li>
-          <li>Pumpkin Seed Extract</li>
-          <li>Green Tea</li>
-          <li>Cat’s Claw</li>
-          <li>Soursop</li>
-          <li>Raspberry</li>
-        </ul>
-      </div>
-      <div class="column">
-        <ul>
-          <li>Lycopene</li>
-          <li>Quercetin & Curcumin</li>
-          <li>Vitamins D3 & K2</li>
-          <li>Zinc</li>
-          <li>Selenium</li>
-          <li>Boron</li>
-          <li>Beta-Sitosterol</li>
-        </ul>
-      </div>
-    </div>
+    <h3 style="margin-top:10px; font-size:14px; color:#333;">Guarantee and Purchase</h3>
+    <p style="font-size:12px; line-height:1.4; color:#666;">
+      SleepLean is available only on the official website, ensuring authenticity and product quality.  
+      The brand offers a 90-day return policy, giving consumers peace of mind with their purchase.  
+    </p>
   </section>
-</body>
-</html>
-
-  </div>
-</section>
-
-  <!-- Informational content para não ser “thin” -->
-  <section class="wrap" aria-label="Overview">
-    <div class="cards">
-      <div class="card">
-        <h3>Overview</h3>
-        <p>This independent page summarizes common ingredients and habits associated with male wellness and urinary comfort. It does not provide medical advice and does not guarantee results.</p>
-      </div>
-      <div class="card">
-        <h3>Good habits</h3>
-        <p>Hydration, balanced diet, physical activity and periodic check-ups are essential for overall wellbeing. Supplements can complement, not replace, healthy routines.</p>
-      </div>
-      <div class="card">
-        <h3>Responsible use</h3>
-        <p>Consult a qualified healthcare professional before starting any new supplement, particularly if you use medication or have a medical condition.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" aria-label="FAQ">
-    <div class="card">
-      <h3>FAQ (short)</h3>
-      <p><strong>Is this the official store?</strong> No. This is an independent informational page that links to the official website.</p>
-      <p><strong>Is this medical advice?</strong> No. Talk to a qualified healthcare professional.</p>
-      <p><strong>Do you earn a commission?</strong> We may receive a commission if you purchase via our link. This does not change the price you pay.</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <div>
-        <a href="/privacy/" rel="noopener">Privacy Policy</a> ·
-        <a href="/terms/" rel="noopener">Terms of Use</a> ·
-        <a href="/contact/" rel="noopener">Contact</a> ·
-        <a href="mailto:contact@official-store2.online">contact@official-store2.online</a>
-      </div>
-      <div class="small">
-        © <span id="y"></span> Official Store 2 — Informational page. Not a medical site.  
-        Badges above are illustrative and indicate manufacturing and quality practices statements provided by vendors; they are not medical approvals.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
