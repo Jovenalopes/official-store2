@@ -187,6 +187,164 @@
     <p>Made with natural ingredients, non-GMO, and gluten-free.</p>
   </div>
 </section>
+  <!-- REVIEWS – paste this block wherever you want it to appear -->
+<style>
+  .reviews {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  .reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .review-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .review-card__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .review-card__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f2f2f2;
+  }
+  .review-card__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.1;
+  }
+  .review-card__verified {
+    display: inline-block;
+    font-size: 12px;
+    color: #2e7d32;
+    background: #e8f5e9;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-top: 4px;
+  }
+  .stars {
+    display: inline-flex;
+    gap: 2px;
+  }
+  .star {
+    font-size: 18px;
+    line-height: 1;
+    color: #ffc107; /* yellow */
+  }
+  .review-card__text {
+    font-size: 14px;
+    color: #333;
+  }
+  .review-card__date {
+    margin-top: auto;
+    font-size: 12px;
+    color: #7a7a7a;
+  }
+
+  /* optional dark mode (if the site has it) */
+  @media (prefers-color-scheme: dark) {
+    .review-card { background: #121212; box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+    .review-card__text, .review-card__name, .review-card__date { color: #eaeaea; }
+    .review-card__verified { color: #a5d6a7; background: #1b3b22; }
+  }
+</style>
+
+<section class="reviews" aria-label="Customer reviews">
+  <div class="reviews__grid">
+
+    <!-- Review 1 -->
+    <article class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+      <div class="review-card__head">
+        <img src="customer1.jpg" alt="Photo of Sophia P." class="review-card__avatar" loading="lazy">
+        <div>
+          <div class="review-card__name" itemprop="author">Sophia P.</div>
+          <span class="review-card__verified">Verified buyer</span>
+        </div>
+      </div>
+      <div class="stars" aria-label="5 out of 5 stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+        <meta itemprop="ratingValue" content="5">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="review-card__text" itemprop="reviewBody">
+        “In the first week my sleep became deeper and I wake up with much more energy. It has become part of my routine.”
+      </p>
+      <time class="review-card__date" datetime="2025-06-18">18 Jun 2025</time>
+    </article>
+
+    <!-- Review 2 -->
+    <article class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+      <div class="review-card__head">
+        <img src="customer2.jpg" alt="Photo of William R." class="review-card__avatar" loading="lazy">
+        <div>
+          <div class="review-card__name" itemprop="author">William R.</div>
+          <span class="review-card__verified">Verified buyer</span>
+        </div>
+      </div>
+      <div class="stars" aria-label="5 out of 5 stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+        <meta itemprop="ratingValue" content="5">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="review-card__text" itemprop="reviewBody">
+        “My pre-sleep anxiety decreased a lot. I fall asleep quickly and wake up feeling lighter.”
+      </p>
+      <time class="review-card__date" datetime="2025-07-02">02 Jul 2025</time>
+    </article>
+
+    <!-- Review 3 -->
+    <article class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+      <div class="review-card__head">
+        <img src="customer3.jpg" alt="Photo of Amelia S." class="review-card__avatar" loading="lazy">
+        <div>
+          <div class="review-card__name" itemprop="author">Amelia S.</div>
+          <span class="review-card__verified">Verified buyer</span>
+        </div>
+      </div>
+      <div class="stars" aria-label="5 out of 5 stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+        <meta itemprop="ratingValue" content="5">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="review-card__text" itemprop="reviewBody">
+        “Sleeping better and not snacking at night. I wake up with energy to train.”
+      </p>
+      <time class="review-card__date" datetime="2025-05-27">27 May 2025</time>
+    </article>
+
+    <!-- Review 4 -->
+    <article class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+      <div class="review-card__head">
+        <img src="customer4.jpg" alt="Photo of Michael M." class="review-card__avatar" loading="lazy">
+        <div>
+          <div class="review-card__name" itemprop="author">Michael M.</div>
+          <span class="review-card__verified">Verified buyer</span>
+        </div>
+      </div>
+      <div class="stars" aria-label="5 out of 5 stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+        <meta itemprop="ratingValue" content="5">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="review-card__text" itemprop="reviewBody">
+        “It's not a miracle, but for me it worked: stable sleep and more productive mornings.”
+      </p>
+      <time class="review-card__date" datetime="2025-08-09">09 Aug 2025</time>
+    </article>
+
+  </div>
+  <p style="font-size:12px;color:#7a7a7a;margin-top:8px;">
+    *Results may vary from person to person.
+  </p>
+</section>
   <section class="content">
     <h2 style="text-align:center; font-size:16px; color:#333;">Understanding SleepLean</h2>
     <p>    
